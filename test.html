@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Sysware Info Tech</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-image: url('/img/syswarebg.jpg');
+            /* Add your background image URL */
+            background-size: cover;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+            width: 150px;
+            /* Set the desired width */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        form {
+            width: 300px;
+            padding: 50px;
+            border: 5px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .first-wrap {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="/img/syswarelogo.png" alt="Your Logo"> <!-- Add your logo image URL -->
+    </div>
+
+    <!-- <form th:action="@{/exploit2}">
+        <p><label>Send your feedback to Admin</label><input type="text" th:name="Feedback" /></p>
+        <input type="submit" />
+    </form> -->
+    <form th:action="@{/vulnmachines}">
+        <div class="inner-form">
+            <div class="input-field first-wrap">
+                <input id="search" type="text" placeholder="What are you looking for?" />
+            </div>
+
+            <div class="input-field third-wrap">
+                <button class="btn-search" type="submit">SEARCH</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
